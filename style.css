@@ -1,0 +1,55 @@
+
+body {
+    padding-top: 56px;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding-top: 0;
+    }
+}
+.category-item {
+    cursor: pointer;
+}
+
+.category-item:hover {
+    background-color: #e6e6e6; /* Cambia el color de fondo al pasar el cursor */
+}
+
+.custom-image-size {
+    width: 100%; /* Establece el ancho al 100% para que todas las imágenes tengan el mismo ancho */
+    height: auto; /* Mantén la proporción original de la imagen ajustando automáticamente la altura */
+}
+.container-categorias {
+    margin-top: 20px;
+}
+
+.categorias-sidebar {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.categorias-sidebar h5 {
+    color: #495057;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btn-categoria {
+    width: 100%;
+    text-align: left;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#product-container {
+    margin-top: 20px;
+}
+
+/* Agrega un margen superior adicional */
+.col-md-3 {
+    margin-top: 40px;
+}
