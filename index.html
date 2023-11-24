@@ -6,15 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo Eftalia</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
+<style>
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+</style>
 
-<body class="d-flex flex-column min-vh-100">
+<body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="#"
-                    style="font-family: 'cursive'; font-size: 24px; font-weight: bold; color: #fff;">
+                <a class="navbar-brand" style="font-family: 'cursive'; font-size: 24px; font-weight: bold; color: #fff;"
+                    href="index.html">
                     Eftalia
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -24,42 +31,76 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="about-us.html">Cadenas</a>
+                            <a class="nav-link" href="about-us.html">Acerca de Eftalia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Aretes</a>
+                            <a class="nav-link" href="contact.html">Contacto</a>
                         </li>
                     </ul>
-                    <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-2">
-                        <input type="text" id="search-input" class="form-control form-control-dark"
-                            placeholder="Buscar productos...">
-                    </form>
                 </div>
             </div>
         </nav>
     </header>
-
-    <div class="container mt-3">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="categorias-sidebar">
-                    <h5>Categorías:</h5>
-                    <select class="form-select select-categoria" onchange="filtrarProductos(this.value)">
-                        <option value="cadenas">Cadenas</option>
-                        <option value="aretes">Aretes</option>
-                        <!-- Agrega más opciones según tus necesidades -->
-                    </select>
-                </div>
-            </div>
-            <div class="col-md-9">
-                <div id="product-container"></div>
+    
+    <section class="py-5 text-center container">
+        <form class="row-cols-lg-6 col-lg-auto mb-2 mb-lg-0 me-lg-2">
+            <input type="text" id="search-input" class="form-control form-control-dark"
+                placeholder="Buscar productos...">
+        </form>
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 style="font-family: 'Dancing Script', cursive; font-size: 24px; font-weight: bold;"
+                    class="fw-light">Eftalia</h1>
+                <p style="font-family: 'Montserrat', sans-serif;" class="lead text-body-secondary">Bienvenido a
+                    Eftalia, tu destino para joyería única y elegante.
+                    Explora nuestra colección cuidadosamente seleccionada de cadenas, aretes, manillas y más. Cada pieza
+                    está diseñada para realzar tu belleza y expresar tu estilo único. Descubre la exquisitez y artesanía
+                    en cada detalle.</p>
+                <p>
+                    <a onclick="filtrarProductos('cadenas')" class="btn btn-outline-info">Cadenas</a>
+                    <a onclick="filtrarProductos('aretes')" class="btn btn-outline-info">Aretes</a>
+                    <a class="btn btn-outline-info">Manillas</a>
+                    <a class="btn btn-outline-info">Otros</a>
+                </p>
             </div>
         </div>
-    </div>
-    <footer class="bg-light text-center py-3 mt-auto">
-        <p>© 2023 Eftalia</p>
-    </footer>
 
+        <div class="col-md-12">
+            <div id="product-container"></div>
+        </div>
+    </section>
+
+    <div class="container">
+
+    </div>
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contáctanos</h5>
+                    <p>Correo electrónico: info@eftalia.com</p>
+                    <p>Teléfono: +123 456 789</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Ubicación</h5>
+                    <p>Bucaramanga, Santander - Colombia</p>
+                    <p>Pagos contra entrega en la ciudad de Bucaramanga</p>
+
+                </div>
+                <div class="col-md-4">
+                    <h5>Síguenos en Redes Sociales</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#" class="text-light"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#" class="text-light"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p>&copy; 2023 Eftalia. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="app.js"></script>
 </body>

@@ -4,15 +4,14 @@ import { aretesProducts } from './tiposProducto/aretes.js';
 const productosTodos = [...cadenasProducts, ...aretesProducts];
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Llamamos a la función mostrarProductos con todos los productos al cargar la página
-    mostrarProductos(productosTodos);
+    
+    const categoryButtons = document.querySelectorAll('.btn');
 
-    const categoryList = document.getElementById('category-list');
-    categoryList.addEventListener('click', function (event) {
-        if (event.target.classList.contains('category-item')) {
-            const categoriaSeleccionada = event.target.dataset.category;
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function (event) {
+            const categoriaSeleccionada = event.target.textContent.toLowerCase();
             filtrarProductos(categoriaSeleccionada);
-        }
+        });
     });
 
     document.getElementById('search-input').addEventListener('input', function () {
@@ -37,18 +36,36 @@ function mostrarProductos(productos, nombreSeccion) {
         return producto.nombre.toLowerCase().includes(searchTerm) ||
             producto.descripcion.toLowerCase().includes(searchTerm);
     });
+
     if (productosFiltrados.length > 0) {
         const seccionHTML = `<div class="mb-3">
-      <h2>${nombreSeccion ? nombreSeccion : 'Todos los productos'}</h2>
             <div class="row row-cols-2 row-cols-md-4">
                 ${productosFiltrados.map(producto => `
                     <div class="col mb-3">
-                        <div class="card">
+                        <div class="card" data-bs-toggle="modal" data-bs-target="#productoModal${producto.id}">
                             <img src="${producto.imagen}" class="card-img-top custom-image-size" alt="${producto.nombre}">
                             <div class="card-body">
                                 <h5 class="card-title">${producto.nombre}</h5>
                                 <p class="card-text">${producto.descripcion}</p>
                                 <p class="card-text">Precio: $${producto.precio}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="productoModal${producto.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">${producto.nombre}</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="${producto.imagen}" class="img-fluid" alt="${producto.nombre}">
+                                    <p>${producto.descripcion}</p>
+                                    <p>Precio: $${producto.precio}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Cerrar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -61,6 +78,7 @@ function mostrarProductos(productos, nombreSeccion) {
         </div>`;
     }
 }
+
 
 /**
  * Filtra y muestra productos según la categoría seleccionada.
@@ -78,10 +96,6 @@ function filtrarProductos(categoriaSeleccionada) {
             break;
         case 'aretes':
             productosFiltrados = aretesProducts;
-            break;
-        default:
-            // Si no se especifica ninguna categoría, mostramos todos los productos
-            productosFiltrados = productosTodos;
             break;
     }
 
