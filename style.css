@@ -15,12 +15,6 @@ body {
     height: auto;
 }
 
-.custom-card-image {
-    object-fit: cover;
-    height: 380px;
-    width: 100%;
-}
-
 .container-categorias {
     margin-top: 20px;
 }

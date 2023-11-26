@@ -37,7 +37,7 @@ export const aretesProducts = [
         nombre: 'EAR CUFF EN RODIO',
         descripcion: 'ECR-119 Color: DORADO',
         precio: '9.000',
-        imagen: './img/aretes/ecr-119.png',
+        imagen: './img/aretes/ECR-119.png',
         cantidadStock: 2
     },
     {
