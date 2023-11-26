@@ -1,10 +1,12 @@
 import { cadenasProducts } from './tiposProducto/cadenas.js';
 import { aretesProducts } from './tiposProducto/aretes.js';
+import { candongaProducts } from './tiposProducto/candonga.js';
+import { anillosProducts } from './tiposProducto/anillos.js';
 
-const productosTodos = [...cadenasProducts, ...aretesProducts];
+const productosTodos = [...cadenasProducts, ...aretesProducts, ...candongaProducts, ...anillosProducts];
 
 document.addEventListener('DOMContentLoaded', function () {
-    
+
     const categoryButtons = document.querySelectorAll('.btn');
 
     categoryButtons.forEach(button => {
@@ -42,12 +44,18 @@ function mostrarProductos(productos, nombreSeccion) {
             <div class="row row-cols-2 row-cols-md-4">
                 ${productosFiltrados.map(producto => `
                     <div class="col mb-3">
-                        <div class="card" data-bs-toggle="modal" data-bs-target="#productoModal${producto.id}">
-                            <img src="${producto.imagen}" class="card-img-top custom-image-size" alt="${producto.nombre}">
+                        <div class="card" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#productoModal${producto.id}">
+                        <img src="${producto.imagen}" class="card-img-top custom-card-image" alt="${producto.nombre}">
                             <div class="card-body">
                                 <h5 class="card-title">${producto.nombre}</h5>
                                 <p class="card-text">${producto.descripcion}</p>
                                 <p class="card-text">Precio: $${producto.precio}</p>
+                                ${producto.cantidadStock === 1 ?
+                '<p class="card-text text-danger"><i class="fas fa-exclamation-triangle"></i> Último disponible</p>'
+                : ''}
+                                ${producto.cantidadStock === 0 ?
+                '<p class="card-text text-danger">Agotado</p>'
+                : ''}
                             </div>
                         </div>
                     </div>
@@ -96,6 +104,12 @@ function filtrarProductos(categoriaSeleccionada) {
             break;
         case 'aretes':
             productosFiltrados = aretesProducts;
+            break;
+        case 'candongas':
+            productosFiltrados = candongaProducts;
+            break;
+        case 'anillos':
+            productosFiltrados = anillosProducts;
             break;
     }
 
