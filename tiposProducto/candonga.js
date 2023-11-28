@@ -1,5 +1,5 @@
 
-export const candongaProducts = [
+export const aretesProducts = [
     {
         id: 1,
         nombre: 'CA-001-11 CANDONGAS EN ACERO 7 CM',
@@ -96,6 +96,102 @@ export const candongaProducts = [
         imagen: './img/candonga/CR-561.png',
         cantidadStock: 2
     },
+    {
+        id: 17,
+        nombre: 'TOPO GOTA PLANA BALIN GRANDE',
+        descripcion: 'CR-632 Color: DORADO ',
+        precio: '30.000',
+        imagen: './img/aretes/CR-632.png',
+        cantidadStock: 2
+    },
+    {
+        id: 18,
+        nombre: 'TOPO GOTA BALIN',
+        descripcion: 'CR-633 Color: DORADO ',
+        precio: '25.000',
+        imagen: './img/aretes/CR-633.png',
+        cantidadStock: 2
+    },
+    {
+        id: 19,
+        nombre: 'TOPO BALIN EN CASCADA',
+        descripcion: 'CR-631 Color: DORADO ',
+        precio: '25.000',
+        imagen: './img/aretes/CR-631.png',
+        cantidadStock: 2
+    },
+    {
+        id: 20,
+        nombre: 'TOPO BALIN EN CASCADA POLATEADO',
+        descripcion: 'CR-631-1 Color: DORADO ',
+        precio: '25.000',
+        imagen: './img/aretes/CR-631-1.png',
+        cantidadStock: 2
+    },
+    {
+        id: 21,
+        nombre: 'TOPO EN RODIO SILUETA DE CORAZON CR-436 ',
+        descripcion: 'CR-436 Color: DORADO ',
+        precio: '18.000',
+        imagen: './img/aretes/CR-436.png',
+        cantidadStock: 2
+    },
+    {
+        id: 22,
+        nombre: 'Candongas 40 mm Oval Doradas ',
+        descripcion: 'Ref: B505 Color: DORADO ',
+        precio: '17.000',
+        imagen: './img/candonga/B505.png',
+        cantidadStock: 2
+    },
+    {
+        id: 23,
+        nombre: 'Candongas Onix 10 mm',
+        descripcion: 'Ref: B583 Color: DORADO ',
+        precio: '18.000',
+        imagen: './img/candonga/B583.png',
+        cantidadStock: 2
+    },
+    {
+        id: 24,
+        nombre: 'Candongas Doradas Circones Rosados',
+        descripcion: 'Ref: B804 Color: DORADO ',
+        precio: '23.000',
+        imagen: './img/candonga/B804.png',
+        cantidadStock: 1
+    },
+    {
+        id: 25,
+        nombre: 'Topitos Corazones Dorados',
+        descripcion: 'Ref: L4252 Color: Dorados ',
+        precio: '6.500',
+        imagen: './img/candonga/L4252.png',
+        cantidadStock: 2
+    },
+    {
+        id: 26,
+        nombre: 'Set Aretes Eva Dorados',
+        descripcion: 'Ref: K093 Color: Dorados ',
+        precio: '36.400',
+        imagen: './img/candonga/K093.png',
+        cantidadStock: 2
+    },
+    {
+        id: 27,
+        nombre: 'Topitos Letra F Corazón ',
+        descripcion: 'Ref: L3132 Color: Dorados Acero inoxidable',
+        precio: '9.000',
+        imagen: './img/candonga/L3132.png',
+        cantidadStock: 2
+    },
+    {
+        id: 27,
+        nombre: 'Topitos Corazones Plateados ',
+        descripcion: 'Ref: L4432 Color: Plateados Acero inoxidable',
+        precio: '6.500',
+        imagen: './img/candonga/L4432.png',
+        cantidadStock: 2
+    },
 ];
 
-export default candongaProducts;
+export default aretesProducts;

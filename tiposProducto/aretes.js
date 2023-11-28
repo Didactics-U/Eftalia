@@ -1,5 +1,5 @@
 
-export const aretesProducts = [
+export const earcuffProducts = [
     {
         id: 1,
         nombre: 'EARCUFF EN RODIO CHUNKY MARTILLADO DORADO',
@@ -130,44 +130,28 @@ export const aretesProducts = [
     },
     {
         id: 17,
-        nombre: 'TOPO GOTA PLANA BALIN GRANDE',
-        descripcion: 'CR-632 Color: DORADO ',
-        precio: '30.000',
-        imagen: './img/aretes/CR-632.png',
+        nombre: 'Ear Cuff Casandra Dorado',
+        descripcion: 'Ref: E050 Color: Dorado ',
+        precio: '20.000',
+        imagen: './img/aretes/E050.png',
         cantidadStock: 2
     },
     {
         id: 18,
-        nombre: 'TOPO GOTA BALIN',
-        descripcion: 'CR-633 Color: DORADO ',
-        precio: '25.000',
-        imagen: './img/aretes/CR-633.png',
+        nombre: 'Ear Cuff Iliana Dorado ',
+        descripcion: 'Ref: E067 Color: Dorado ',
+        precio: '16.000',
+        imagen: './img/aretes/E067.png',
         cantidadStock: 2
     },
     {
         id: 19,
-        nombre: 'TOPO BALIN EN CASCADA',
-        descripcion: 'CR-631 Color: DORADO ',
-        precio: '25.000',
-        imagen: './img/aretes/CR-631.png',
-        cantidadStock: 2
-    },
-    {
-        id: 20,
-        nombre: 'TOPO BALIN EN CASCADA POLATEADO',
-        descripcion: 'CR-631-1 Color: DORADO ',
-        precio: '25.000',
-        imagen: './img/aretes/CR-631-1.png',
-        cantidadStock: 2
-    },
-    {
-        id: 21,
-        nombre: 'TOPO EN RODIO SILUETA DE CORAZON CR-436 ',
-        descripcion: 'CR-436 Color: DORADO ',
-        precio: '18.000',
-        imagen: './img/aretes/CR-436.png',
+        nombre: 'Ear Cuff Gretel',
+        descripcion: 'Ref: E167 Color: Dorado ',
+        precio: '27.500',
+        imagen: './img/aretes/E167.png',
         cantidadStock: 2
     },
 ];
 
-export default aretesProducts;
+export default earcuffProducts;

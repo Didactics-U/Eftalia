@@ -1,9 +1,9 @@
 import { cadenasProducts } from './tiposProducto/cadenas.js';
-import { aretesProducts } from './tiposProducto/aretes.js';
-import { candongaProducts } from './tiposProducto/candonga.js';
+import { earcuffProducts } from './tiposProducto/aretes.js';
+import { aretesProducts } from './tiposProducto/candonga.js';
 import { anillosProducts } from './tiposProducto/anillos.js';
 
-const productosTodos = [...cadenasProducts, ...aretesProducts, ...candongaProducts, ...anillosProducts];
+const productosTodos = [...cadenasProducts, ...earcuffProducts, ...aretesProducts, ...anillosProducts];
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -102,11 +102,11 @@ function filtrarProductos(categoriaSeleccionada) {
         case 'cadenas':
             productosFiltrados = cadenasProducts;
             break;
+        case 'earcuff':
+            productosFiltrados = earcuffProducts;
+            break;
         case 'aretes':
             productosFiltrados = aretesProducts;
-            break;
-        case 'candongas':
-            productosFiltrados = candongaProducts;
             break;
         case 'anillos':
             productosFiltrados = anillosProducts;
