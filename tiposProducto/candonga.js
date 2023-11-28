@@ -190,7 +190,7 @@ export const aretesProducts = [
         descripcion: 'Ref: L4432 Color: Plateados Acero inoxidable',
         precio: '6.500',
         imagen: './img/candonga/L4432.png',
-        cantidadStock: 2
+        cantidadStock: 1
     },
 ];
 

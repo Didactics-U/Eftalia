@@ -30,7 +30,7 @@ export const anillosProducts = [
         descripcion: 'AR-130 Color: DORADO',
         precio: '20.000',
         imagen: './img/anillos/AR-130.png',
-        cantidadStock: 1
+        cantidadStock: 0
     },
     {
         id: 5,
